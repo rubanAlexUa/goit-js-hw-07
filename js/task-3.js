@@ -1,4 +1,7 @@
 document.querySelector("#name-input").addEventListener("input", (e) => {
-  console.log(e);
-  document.querySelector("#name-output").textContent = e.target.value;
+  if (e.target.value.trim() === "") {
+    document.querySelector("#name-output").textContent = "Anonymous";
+  } else {
+    document.querySelector("#name-output").textContent = e.target.value;
+  }
 });
